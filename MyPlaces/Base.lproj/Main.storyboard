@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--My places-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyPlaces" customModuleProvider="target" sceneMemberID="viewController">
@@ -44,7 +44,7 @@
                             <constraint firstItem="G6d-eN-aQL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qSQ-dQ-AFv"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Main View Controller" id="95u-sa-WFb"/>
+                    <navigationItem key="navigationItem" title="My places" id="95u-sa-WFb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -58,6 +58,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="izu-uv-Xwa">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="24"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
