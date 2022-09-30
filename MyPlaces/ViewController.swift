@@ -26,14 +26,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-//        var contentCell = cell.defaultContentConfiguration()
-//        contentCell.text = restraurantNames[indexPath.row]
-//        contentCell.image = UIImage(named: restraurantNames[indexPath.row])
-//        contentCell.textProperties
-//        contentCell.imageProperties
-//        cell.contentConfiguration = contentCell
-        cell.textLabel?.text = restraurantNames[indexPath.row]
-        cell.imageView?.image = UIImage(named: restraurantNames[indexPath.row])
+        var contentCell = cell.defaultContentConfiguration()
+        contentCell.text = restraurantNames[indexPath.row]
+        contentCell.image = UIImage(named: restraurantNames[indexPath.row])
+        contentCell.textProperties
+        contentCell.imageProperties
+        cell.contentConfiguration = contentCell
+//        cell.textLabel?.text = restraurantNames[indexPath.row]
+//        cell.imageView?.image = UIImage(named: restraurantNames[indexPath.row])
         return cell
     }
 
