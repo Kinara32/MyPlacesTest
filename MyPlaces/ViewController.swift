@@ -25,17 +25,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomTableViewCell
+        
 //        var contentCell = cell.defaultContentConfiguration()
 //        contentCell.text = restraurantNames[indexPath.row]
 //        contentCell.image = UIImage(named: restraurantNames[indexPath.row])
-//        contentCell.textProperties
-//        contentCell.imageProperties
+//        contentCell.imageProperties.cornerRadius = cell.frame.size.height / 2
 //        cell.contentConfiguration = contentCell
-        cell.textLabel?.text = restraurantNames[indexPath.row]
-        cell.imageView?.image = UIImage(named: restraurantNames[indexPath.row])
-        cell.imageView?.layer.cornerRadius = cell.frame.size.height / 2
-        cell.imageView?.clipsToBounds = true
+        
+        cell.nameLabel?.text = restraurantNames[indexPath.row]
+        cell.imageOfPlace?.image = UIImage(named: restraurantNames[indexPath.row])
+        cell.imageOfPlace?.layer.cornerRadius = cell.imageOfPlace.frame.size.height / 2
+        cell.imageOfPlace?.clipsToBounds = true
         return cell
     }
 
