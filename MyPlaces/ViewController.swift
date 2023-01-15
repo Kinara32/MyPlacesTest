@@ -71,6 +71,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.imageOfPlace?.clipsToBounds = true
         return cell
     }
+    // MARK: Table view delegete
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let place = places[indexPath.row]
@@ -82,6 +87,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
         return configuration
     }
+    
+    // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
