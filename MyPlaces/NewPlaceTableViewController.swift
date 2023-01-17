@@ -9,7 +9,7 @@ import UIKit
 
 class NewPlaceTableViewController: UITableViewController {
 
-    var currentPlace: Place?
+    var currentPlace: Place!
     
     var imageIsChanged = false
     
@@ -18,6 +18,7 @@ class NewPlaceTableViewController: UITableViewController {
     @IBOutlet weak var placeLocation: UITextField!
     @IBOutlet weak var placeType: UITextField!
     @IBOutlet weak var placeImage: UIImageView!
+    @IBOutlet weak var ratingControl: RatingControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,13 +71,14 @@ class NewPlaceTableViewController: UITableViewController {
         } else {
             image = UIImage(systemName: "photo.circle.fill")
         }
-        let newPlace = Place(name: placeName.text!, location: placeLocation.text, type: placeType.text, imageData: image?.pngData())
+        let newPlace = Place(name: placeName.text!, location: placeLocation.text, type: placeType.text, imageData: image?.pngData(), rating: Double(ratingControl.rating))
         if currentPlace != nil {
             try! realm.write {
                 currentPlace?.name = newPlace.name
                 currentPlace?.location = newPlace.location
                 currentPlace?.type = newPlace.type
                 currentPlace?.imageData = newPlace.imageData
+                currentPlace?.rating = newPlace.rating
             }
         } else {
                 StorageManager.saveObject(newPlace)
@@ -92,6 +94,7 @@ class NewPlaceTableViewController: UITableViewController {
             placeName.text = currentPlace?.name
             placeLocation.text = currentPlace?.location
             placeType.text = currentPlace?.type
+            ratingControl.rating = Int(currentPlace.rating)
         }
     }
     

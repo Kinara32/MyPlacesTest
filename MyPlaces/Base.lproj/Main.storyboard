@@ -278,7 +278,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="252" placeholderIntrinsicHeight="44" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SCj-ey-GDy" customClass="RatingControl" customModule="MyPlaces" customModuleProvider="target">
-                                                    <rect key="frame" x="30.666666666666657" y="25" width="332" height="90"/>
+                                                    <rect key="frame" x="70.666666666666686" y="48" width="252" height="44"/>
                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="starCount">
@@ -321,6 +321,7 @@
                         <outlet property="placeLocation" destination="aAx-Sf-5sC" id="GOP-h4-VBB"/>
                         <outlet property="placeName" destination="xX9-mx-Ecz" id="mGg-a8-GQ7"/>
                         <outlet property="placeType" destination="Dsf-Ve-DPd" id="eyL-Ut-nAf"/>
+                        <outlet property="ratingControl" destination="SCj-ey-GDy" id="QpO-Ae-xWr"/>
                         <outlet property="saveButton" destination="PbW-Nc-nfn" id="GIm-5g-1Zp"/>
                     </connections>
                 </tableViewController>
