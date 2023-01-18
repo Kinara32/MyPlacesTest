@@ -55,7 +55,7 @@ import UIKit
         }
         ratingButtons.removeAll()
         
-        var config = UIImage.SymbolConfiguration(font: .systemFont(ofSize: 46.0))
+        let config = UIImage.SymbolConfiguration(font: .systemFont(ofSize: 46.0))
         var configFilledStar = UIImage.SymbolConfiguration(paletteColors: [.systemCyan])
         configFilledStar = configFilledStar.applying(config)
         let filledStar = UIImage(systemName: "star.fill")?.applyingSymbolConfiguration(config)
