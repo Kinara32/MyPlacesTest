@@ -10,7 +10,7 @@ import MapKit
 
 class MapViewContoller: UIViewController {
 
-    var place: Place!
+    var place = Place()
     let annotationIdentifier = "annotationIdentifier"
     
     @IBOutlet weak var mapView: MKMapView!
