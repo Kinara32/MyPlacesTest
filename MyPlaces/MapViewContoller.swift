@@ -7,11 +7,13 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
 class MapViewContoller: UIViewController {
 
     var place = Place()
     let annotationIdentifier = "annotationIdentifier"
+    let locationManager = CLLocationManager()
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -19,6 +21,7 @@ class MapViewContoller: UIViewController {
         super.viewDidLoad()
         mapView.delegate = self
         setupPlaceMark()
+        checkLocationServices()
     }
     
     @IBAction func closeVC() {
@@ -48,6 +51,39 @@ class MapViewContoller: UIViewController {
             self.mapView.selectAnnotation(annotation, animated: true)
         }
     }
+    
+    private func checkLocationServices() {
+        if CLLocationManager.locationServicesEnabled(){
+            setupLocationManager()
+            checkLocationAuthorization()
+        } else {
+            
+        }
+    }
+    
+    private func setupLocationManager() {
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+    }
+    
+    private func checkLocationAuthorization() {
+        switch CLLocationManager.authorizationStatus() {
+        case .authorizedWhenInUse:
+            mapView.showsUserLocation = true
+            break
+        case .notDetermined:
+            locationManager.requestWhenInUseAuthorization()
+        case .restricted:
+            break
+        case .denied:
+            break
+        case .authorizedAlways:
+            break
+        @unknown default:
+            print("Add new case")
+        }
+    }
+    
 }
 
 extension MapViewContoller: MKMapViewDelegate {
@@ -68,5 +104,11 @@ extension MapViewContoller: MKMapViewDelegate {
             annotationView?.rightCalloutAccessoryView = imageView
         }
         return annotationView
+    }
+}
+
+extension MapViewContoller: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        checkLocationAuthorization()
     }
 }
