@@ -21,6 +21,10 @@ class MapViewContoller: UIViewController {
         super.viewDidLoad()
         mapView.delegate = self
         setupPlaceMark()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         checkLocationServices()
     }
     
@@ -57,7 +61,8 @@ class MapViewContoller: UIViewController {
             setupLocationManager()
             checkLocationAuthorization()
         } else {
-            
+            self.setupAlertController(title:"Location Servies are Disabled",
+                                      message: "To enable it go: Setting -> Privacy -> Location Services and turn on")
         }
     }
     
@@ -76,12 +81,20 @@ class MapViewContoller: UIViewController {
         case .restricted:
             break
         case .denied:
+            self.setupAlertController(title: "Your Location is not Availeble",
+                                      message: "To give permission go to: Setting -> MyPlaces -> Location")
             break
         case .authorizedAlways:
             break
         @unknown default:
             print("Add new case")
         }
+    }
+    private func setupAlertController(title: String, message: String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okButton = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(okButton)
+        present(alert, animated: true)
     }
     
 }
