@@ -314,7 +314,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="252" placeholderIntrinsicHeight="44" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SCj-ey-GDy" customClass="RatingControl" customModule="MyPlaces" customModuleProvider="target">
-                                                    <rect key="frame" x="70.666666666666686" y="48" width="252" height="44"/>
+                                                    <rect key="frame" x="30.666666666666657" y="25" width="332" height="90"/>
                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="starCount">
@@ -390,13 +390,30 @@
                                     <action selector="closeVC" destination="2jX-38-lRq" eventType="touchUpInside" id="29L-Pj-Af8"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JNE-oN-XAW">
+                                <rect key="frame" x="334" y="693" width="59" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="59" id="Fgg-lX-13L"/>
+                                    <constraint firstAttribute="height" constant="50" id="vvX-SQ-Tjy"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <imageReference key="image" image="location.square.fill" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="20" scale="large" weight="heavy"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="centerViewInUserLocation" destination="2jX-38-lRq" eventType="touchUpInside" id="5Dg-he-B9G"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YL7-a4-Jyn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="YL7-a4-Jyn" firstAttribute="trailing" secondItem="JNE-oN-XAW" secondAttribute="trailing" id="1Vo-cJ-fLD"/>
                             <constraint firstItem="5zJ-dl-GsP" firstAttribute="top" secondItem="Y34-mC-mxG" secondAttribute="top" id="6Ft-27-D8c"/>
                             <constraint firstItem="YL7-a4-Jyn" firstAttribute="trailing" secondItem="Thw-3n-g9k" secondAttribute="trailing" constant="5" id="9bl-Yj-OBD"/>
                             <constraint firstAttribute="bottom" secondItem="5zJ-dl-GsP" secondAttribute="bottom" id="CRr-1h-aqX"/>
+                            <constraint firstItem="YL7-a4-Jyn" firstAttribute="bottom" secondItem="JNE-oN-XAW" secondAttribute="bottom" constant="40" id="EBu-J7-Wrl"/>
                             <constraint firstItem="5zJ-dl-GsP" firstAttribute="leading" secondItem="YL7-a4-Jyn" secondAttribute="leading" id="YZ8-sA-aA1"/>
                             <constraint firstItem="Thw-3n-g9k" firstAttribute="top" secondItem="YL7-a4-Jyn" secondAttribute="top" constant="5" id="a02-CZ-xBe"/>
                             <constraint firstItem="5zJ-dl-GsP" firstAttribute="trailing" secondItem="YL7-a4-Jyn" secondAttribute="trailing" id="arD-FM-ZL4"/>
@@ -408,7 +425,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LPU-91-vEb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2888" y="13"/>
+            <point key="canvasLocation" x="2887.7862595419847" y="12.67605633802817"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OjA-CY-wiG">
@@ -464,6 +481,7 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.up.arrow.down" catalog="system" width="128" height="97"/>
+        <image name="location.square.fill" catalog="system" width="128" height="114"/>
         <image name="map.fill" catalog="system" width="128" height="110"/>
         <image name="photo" catalog="system" width="128" height="93"/>
         <image name="star" catalog="system" width="128" height="116"/>

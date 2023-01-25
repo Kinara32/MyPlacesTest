@@ -14,6 +14,7 @@ class MapViewContoller: UIViewController {
     var place = Place()
     let annotationIdentifier = "annotationIdentifier"
     let locationManager = CLLocationManager()
+    let regionInMeters = 10_000.0
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -30,6 +31,13 @@ class MapViewContoller: UIViewController {
     
     @IBAction func closeVC() {
         dismiss(animated: true)
+    }
+    
+    @IBAction func centerViewInUserLocation() {
+        if let location = locationManager.location?.coordinate {
+            let region = MKCoordinateRegion(center: location, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
+            mapView.setRegion(region, animated: true)
+        }
     }
     
     private func setupPlaceMark() {
@@ -81,7 +89,7 @@ class MapViewContoller: UIViewController {
         case .restricted:
             break
         case .denied:
-            self.setupAlertController(title: "Your Location is not Availeble",
+            self.setupAlertController(title: "Your Location is not Available",
                                       message: "To give permission go to: Setting -> MyPlaces -> Location")
             break
         case .authorizedAlways:
