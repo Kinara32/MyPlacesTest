@@ -395,10 +395,10 @@
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Thw-3n-g9k">
-                                <rect key="frame" x="358" y="64" width="30" height="30"/>
+                                <rect key="frame" x="333.66666666666669" y="64" width="54.333333333333314" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="N3Z-Fb-TXk"/>
-                                    <constraint firstAttribute="width" constant="30" id="P3K-49-BiT"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="P3K-49-BiT"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="xmark.circle.fill" catalog="system">
@@ -411,7 +411,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JNE-oN-XAW">
                                 <rect key="frame" x="334" y="693" width="59" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="59" id="Fgg-lX-13L"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="59" id="Fgg-lX-13L"/>
                                     <constraint firstAttribute="height" constant="50" id="vvX-SQ-Tjy"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
@@ -459,10 +459,12 @@
                             <constraint firstItem="5zJ-dl-GsP" firstAttribute="top" secondItem="Y34-mC-mxG" secondAttribute="top" id="6Ft-27-D8c"/>
                             <constraint firstItem="YL7-a4-Jyn" firstAttribute="trailing" secondItem="Thw-3n-g9k" secondAttribute="trailing" constant="5" id="9bl-Yj-OBD"/>
                             <constraint firstItem="Boi-4Q-7UW" firstAttribute="centerY" secondItem="Y34-mC-mxG" secondAttribute="centerY" constant="-22" id="AD4-ZE-bAT"/>
+                            <constraint firstItem="Thw-3n-g9k" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="YL7-a4-Jyn" secondAttribute="leading" symbolic="YES" id="B7u-Tu-Uok"/>
                             <constraint firstAttribute="bottom" secondItem="5zJ-dl-GsP" secondAttribute="bottom" id="CRr-1h-aqX"/>
                             <constraint firstItem="pT8-ot-Upd" firstAttribute="centerX" secondItem="Y34-mC-mxG" secondAttribute="centerX" id="DRg-se-i2X"/>
                             <constraint firstItem="YL7-a4-Jyn" firstAttribute="bottom" secondItem="JNE-oN-XAW" secondAttribute="bottom" constant="40" id="EBu-J7-Wrl"/>
                             <constraint firstItem="YL7-a4-Jyn" firstAttribute="bottom" secondItem="pT8-ot-Upd" secondAttribute="bottom" constant="43" id="Lsl-lB-lIR"/>
+                            <constraint firstItem="JNE-oN-XAW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="pT8-ot-Upd" secondAttribute="trailing" constant="8" symbolic="YES" id="WGT-Hh-22p"/>
                             <constraint firstItem="5zJ-dl-GsP" firstAttribute="leading" secondItem="YL7-a4-Jyn" secondAttribute="leading" id="YZ8-sA-aA1"/>
                             <constraint firstItem="Thw-3n-g9k" firstAttribute="top" secondItem="YL7-a4-Jyn" secondAttribute="top" constant="5" id="a02-CZ-xBe"/>
                             <constraint firstItem="5zJ-dl-GsP" firstAttribute="trailing" secondItem="YL7-a4-Jyn" secondAttribute="trailing" id="arD-FM-ZL4"/>
