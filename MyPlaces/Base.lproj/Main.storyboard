@@ -330,7 +330,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="252" placeholderIntrinsicHeight="44" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SCj-ey-GDy" customClass="RatingControl" customModule="MyPlaces" customModuleProvider="target">
-                                                    <rect key="frame" x="30.666666666666657" y="25" width="332" height="90"/>
+                                                    <rect key="frame" x="70.666666666666686" y="48" width="252" height="44"/>
                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="starCount">
@@ -449,6 +449,21 @@
                                     <action selector="donePressed" destination="2jX-38-lRq" eventType="touchUpInside" id="JEA-Rk-kkx"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYS-NE-NR5">
+                                <rect key="frame" x="174" y="640" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="K3K-Uz-7Kn"/>
+                                    <constraint firstAttribute="height" constant="45" id="tjF-Dd-gGZ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <imageReference key="image" image="arrow.triangle.turn.up.right.circle.fill" catalog="system" renderingMode="original"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="goButtonPressed" destination="2jX-38-lRq" eventType="touchUpInside" id="J3G-ly-CYe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YL7-a4-Jyn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -466,15 +481,18 @@
                             <constraint firstItem="YL7-a4-Jyn" firstAttribute="bottom" secondItem="pT8-ot-Upd" secondAttribute="bottom" constant="43" id="Lsl-lB-lIR"/>
                             <constraint firstItem="JNE-oN-XAW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="pT8-ot-Upd" secondAttribute="trailing" constant="8" symbolic="YES" id="WGT-Hh-22p"/>
                             <constraint firstItem="5zJ-dl-GsP" firstAttribute="leading" secondItem="YL7-a4-Jyn" secondAttribute="leading" id="YZ8-sA-aA1"/>
+                            <constraint firstItem="pT8-ot-Upd" firstAttribute="top" secondItem="hYS-NE-NR5" secondAttribute="bottom" constant="5" id="YiV-ba-8LK"/>
                             <constraint firstItem="Thw-3n-g9k" firstAttribute="top" secondItem="YL7-a4-Jyn" secondAttribute="top" constant="5" id="a02-CZ-xBe"/>
                             <constraint firstItem="5zJ-dl-GsP" firstAttribute="trailing" secondItem="YL7-a4-Jyn" secondAttribute="trailing" id="arD-FM-ZL4"/>
                             <constraint firstItem="5zJ-dl-GsP" firstAttribute="top" secondItem="bAT-eq-OVp" secondAttribute="bottom" constant="-158" id="eER-ev-z8J"/>
+                            <constraint firstItem="hYS-NE-NR5" firstAttribute="centerX" secondItem="Y34-mC-mxG" secondAttribute="centerX" id="lr9-wb-86u"/>
                             <constraint firstItem="Boi-4Q-7UW" firstAttribute="centerX" secondItem="Y34-mC-mxG" secondAttribute="centerX" id="srn-pQ-C4i"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="addressLabel" destination="bAT-eq-OVp" id="7uv-aR-HsW"/>
                         <outlet property="doneButton" destination="pT8-ot-Upd" id="m3Q-sG-mSU"/>
+                        <outlet property="goButton" destination="hYS-NE-NR5" id="54O-Jb-Chc"/>
                         <outlet property="mapPinImage" destination="Boi-4Q-7UW" id="cQj-Qy-8aS"/>
                         <outlet property="mapView" destination="5zJ-dl-GsP" id="KlA-Ot-xOt"/>
                     </connections>
@@ -537,6 +555,7 @@
         <segue reference="tYR-d9-tBd"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="arrow.triangle.turn.up.right.circle.fill" catalog="system" width="128" height="123"/>
         <image name="arrow.up.arrow.down" catalog="system" width="128" height="97"/>
         <image name="checkmark.square.fill" catalog="system" width="128" height="114"/>
         <image name="location.square.fill" catalog="system" width="128" height="114"/>

@@ -26,6 +26,7 @@ class MapViewContoller: UIViewController {
     @IBOutlet weak var mapPinImage: UIImageView!
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var goButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +44,8 @@ class MapViewContoller: UIViewController {
         mapViewControllerDelegate?.getAddress(addressLabel.text)
         dismiss(animated: true)
     }
+    @IBAction func goButtonPressed() {
+    }
     
     @IBAction func closeVC() {
         dismiss(animated: true)
@@ -53,11 +56,15 @@ class MapViewContoller: UIViewController {
     }
     
     private func setupMapView() {
+        
+        goButton.isHidden = true
+        
         if incomeSegueIdentifier == "showPlace" {
             setupPlaceMark()
             mapPinImage.isHidden = true
             addressLabel.isHidden = true
             doneButton.isHidden = true
+            goButton.isHidden = false
         }
     }
     
