@@ -15,6 +15,7 @@
 		F1C63FC428E729CD0087CC4D /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C63FC328E729CD0087CC4D /* CustomTableViewCell.swift */; };
 		F1C63FC628E74F040087CC4D /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C63FC528E74F040087CC4D /* PlaceModel.swift */; };
 		F1C7A12728EC657900AED08E /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C7A12628EC657900AED08E /* StorageManager.swift */; };
+		F1EA9F80298B0247005DA81E /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EA9F7F298B0247005DA81E /* MapManager.swift */; };
 		F1EF263529734146004AB278 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EF263429734146004AB278 /* RatingControl.swift */; };
 		F1FD17E628E621F20056C570 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FD17E528E621F20056C570 /* AppDelegate.swift */; };
 		F1FD17E828E621F20056C570 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FD17E728E621F20056C570 /* SceneDelegate.swift */; };
@@ -33,6 +34,7 @@
 		F1C63FC328E729CD0087CC4D /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		F1C63FC528E74F040087CC4D /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
 		F1C7A12628EC657900AED08E /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		F1EA9F7F298B0247005DA81E /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
 		F1EF263429734146004AB278 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		F1FD17E228E621F20056C570 /* MyPlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPlaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1FD17E528E621F20056C570 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +77,55 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F1EA9F81298B10BE005DA81E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F1FD17E928E621F20056C570 /* ViewController.swift */,
+				F18C8BF528E875ED005813A2 /* NewPlaceTableViewController.swift */,
+				F16A61D92979EAED00BF2291 /* MapViewContoller.swift */,
+				F1C63FC328E729CD0087CC4D /* CustomTableViewCell.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F1EA9F82298B10FC005DA81E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F1C63FC528E74F040087CC4D /* PlaceModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F1EA9F83298B1133005DA81E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F1EA9F7F298B0247005DA81E /* MapManager.swift */,
+				F1EF263429734146004AB278 /* RatingControl.swift */,
+				F1C7A12628EC657900AED08E /* StorageManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F1EA9F84298B1156005DA81E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F1FD17EE28E621F30056C570 /* Assets.xcassets */,
+				F1FD17E528E621F20056C570 /* AppDelegate.swift */,
+				F1FD17E728E621F20056C570 /* SceneDelegate.swift */,
+				F1FD17F328E621F30056C570 /* Info.plist */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		F1EA9F85298B11D1005DA81E /* IBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				F1FD17EB28E621F20056C570 /* Main.storyboard */,
+				F1FD17F028E621F30056C570 /* LaunchScreen.storyboard */,
+			);
+			path = IBuilder;
+			sourceTree = "<group>";
+		};
 		F1FD17D928E621F20056C570 = {
 			isa = PBXGroup;
 			children = (
@@ -96,19 +147,11 @@
 		F1FD17E428E621F20056C570 /* MyPlaces */ = {
 			isa = PBXGroup;
 			children = (
-				F1FD17E528E621F20056C570 /* AppDelegate.swift */,
-				F1FD17E728E621F20056C570 /* SceneDelegate.swift */,
-				F1FD17E928E621F20056C570 /* ViewController.swift */,
-				F1C63FC528E74F040087CC4D /* PlaceModel.swift */,
-				F1C7A12628EC657900AED08E /* StorageManager.swift */,
-				F1C63FC328E729CD0087CC4D /* CustomTableViewCell.swift */,
-				F1EF263429734146004AB278 /* RatingControl.swift */,
-				F16A61D92979EAED00BF2291 /* MapViewContoller.swift */,
-				F18C8BF528E875ED005813A2 /* NewPlaceTableViewController.swift */,
-				F1FD17EB28E621F20056C570 /* Main.storyboard */,
-				F1FD17EE28E621F30056C570 /* Assets.xcassets */,
-				F1FD17F028E621F30056C570 /* LaunchScreen.storyboard */,
-				F1FD17F328E621F30056C570 /* Info.plist */,
+				F1EA9F81298B10BE005DA81E /* ViewControllers */,
+				F1EA9F83298B1133005DA81E /* Helpers */,
+				F1EA9F82298B10FC005DA81E /* Models */,
+				F1EA9F84298B1156005DA81E /* Support Files */,
+				F1EA9F85298B11D1005DA81E /* IBuilder */,
 			);
 			path = MyPlaces;
 			sourceTree = "<group>";
@@ -241,6 +284,7 @@
 				F1C7A12728EC657900AED08E /* StorageManager.swift in Sources */,
 				F16A61DA2979EAED00BF2291 /* MapViewContoller.swift in Sources */,
 				F1EF263529734146004AB278 /* RatingControl.swift in Sources */,
+				F1EA9F80298B0247005DA81E /* MapManager.swift in Sources */,
 				F1C63FC628E74F040087CC4D /* PlaceModel.swift in Sources */,
 				F1C63FC428E729CD0087CC4D /* CustomTableViewCell.swift in Sources */,
 				F1FD17E828E621F20056C570 /* SceneDelegate.swift in Sources */,
@@ -393,7 +437,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7J4GDFSRND;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyPlaces/Info.plist;
+				INFOPLIST_FILE = "MyPlaces/Support Files/Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "$(PRODUCT_NAME) photo use";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -424,7 +468,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7J4GDFSRND;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyPlaces/Info.plist;
+				INFOPLIST_FILE = "MyPlaces/Support Files/Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "$(PRODUCT_NAME) photo use";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
